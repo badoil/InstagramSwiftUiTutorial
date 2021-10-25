@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  NotificationsView.swift
 //  InstagramSwiftUiTutorial
 //
 //  Created by 장준호 on 2021/10/24.
@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct NotificationsView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Notification!")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct NotificationsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NotificationsView()
     }
 }
