@@ -14,11 +14,15 @@ struct PostGridView: View {
     var body: some View {
         LazyVGrid(columns: items, spacing: 2, content: {
             ForEach(0 ..< 10) { _ in
-                Image("batman")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: width, height: width)
-                    .clipped()
+                NavigationLink(
+                    destination: FeedView(),
+                    label: {
+                        Image("batman")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: width, height: width)
+                            .clipped()
+                    })
             }
         })
     }
