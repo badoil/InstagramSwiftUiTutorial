@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0B7C5DE72726C7D100BFB1BB /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C5DE62726C7D100BFB1BB /* FeedCell.swift */; };
+		95BE5502273D39D600E56DA6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BE5501273D39D600E56DA6 /* LoginView.swift */; };
+		95BE5504273D3DF400E56DA6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BE5503273D3DF400E56DA6 /* CustomTextField.swift */; };
+		95BE5506273D42CD00E56DA6 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BE5505273D42CC00E56DA6 /* CustomSecureField.swift */; };
 		95C71A7F27258F710007EF52 /* InstagramSwiftUiTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C71A7E27258F710007EF52 /* InstagramSwiftUiTutorialApp.swift */; };
 		95C71A8327258F730007EF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C71A8227258F730007EF52 /* Assets.xcassets */; };
 		95C71A8627258F730007EF52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C71A8527258F730007EF52 /* Preview Assets.xcassets */; };
@@ -32,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		0B7C5DE62726C7D100BFB1BB /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		95BE5501273D39D600E56DA6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = InstagramSwiftUiTutorial/Utils/LoginView.swift; sourceTree = SOURCE_ROOT; };
+		95BE5503273D3DF400E56DA6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		95BE5505273D42CC00E56DA6 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		95C71A7B27258F710007EF52 /* InstagramSwiftUiTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramSwiftUiTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C71A7E27258F710007EF52 /* InstagramSwiftUiTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSwiftUiTutorialApp.swift; sourceTree = "<group>"; };
 		95C71A8227258F730007EF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				95C71AC22737F4300007EF52 /* ImgagePicker.swift */,
+				95BE5503273D3DF400E56DA6 /* CustomTextField.swift */,
+				95BE5505273D42CC00E56DA6 /* CustomSecureField.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -222,6 +230,7 @@
 		95C71A99272591210007EF52 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				95BE5501273D39D600E56DA6 /* LoginView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -349,16 +358,19 @@
 				95C71AA02725926F0007EF52 /* ContentView.swift in Sources */,
 				95C71A7F27258F710007EF52 /* InstagramSwiftUiTutorialApp.swift in Sources */,
 				95C71AA22725927C0007EF52 /* MainTabView.swift in Sources */,
+				95BE5506273D42CD00E56DA6 /* CustomSecureField.swift in Sources */,
 				95C71ABD27355CC60007EF52 /* ProfileHeaderView.swift in Sources */,
 				95C71AAC272593470007EF52 /* UploadPostView.swift in Sources */,
 				95C71ABF273658BE0007EF52 /* UserStatView.swift in Sources */,
 				95C71AB2272EBEBC0007EF52 /* UserListView.swift in Sources */,
 				95C71AC32737F4300007EF52 /* ImgagePicker.swift in Sources */,
 				95C71AAA2725933A0007EF52 /* ProfileView.swift in Sources */,
+				95BE5504273D3DF400E56DA6 /* CustomTextField.swift in Sources */,
 				95C71AAE272EB63C0007EF52 /* SearchBar.swift in Sources */,
 				95C71AA82725931E0007EF52 /* NotificationsView.swift in Sources */,
 				0B7C5DE72726C7D100BFB1BB /* FeedCell.swift in Sources */,
 				95C71ABB273558CB0007EF52 /* NotificationCell.swift in Sources */,
+				95BE5502273D39D600E56DA6 /* LoginView.swift in Sources */,
 				95C71AB7272EC6DC0007EF52 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
