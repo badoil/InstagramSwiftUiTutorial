@@ -31,6 +31,7 @@
 		95C71ABF273658BE0007EF52 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C71ABE273658BE0007EF52 /* UserStatView.swift */; };
 		95C71AC127365DBB0007EF52 /* ProfileActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C71AC027365DBB0007EF52 /* ProfileActionButton.swift */; };
 		95C71AC32737F4300007EF52 /* ImgagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C71AC22737F4300007EF52 /* ImgagePicker.swift */; };
+		95C8F770273F8C3C00A8467F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8F76F273F8C3C00A8467F /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		95C71ABE273658BE0007EF52 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 		95C71AC027365DBB0007EF52 /* ProfileActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButton.swift; sourceTree = "<group>"; };
 		95C71AC22737F4300007EF52 /* ImgagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgagePicker.swift; sourceTree = "<group>"; };
+		95C8F76F273F8C3C00A8467F /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationView.swift; path = InstagramSwiftUiTutorial/Utils/RegistrationView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				95BE5501273D39D600E56DA6 /* LoginView.swift */,
+				95C8F76F273F8C3C00A8467F /* RegistrationView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			files = (
 				95C71AA6272592F70007EF52 /* SearchView.swift in Sources */,
 				95C71AB4272EBEC60007EF52 /* UserCell.swift in Sources */,
+				95C8F770273F8C3C00A8467F /* RegistrationView.swift in Sources */,
 				95C71AA4272592BC0007EF52 /* FeedView.swift in Sources */,
 				95C71AC127365DBB0007EF52 /* ProfileActionButton.swift in Sources */,
 				95C71AB0272EBAF10007EF52 /* PostGridView.swift in Sources */,
