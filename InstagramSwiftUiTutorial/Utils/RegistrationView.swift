@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct RegistrationView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     
-    @State private var text = ""
+    @State private var email = ""
     @State private var username = ""
     @State private var fullname = ""
     @State private var password = ""
@@ -49,21 +50,21 @@ struct RegistrationView: View {
 
                 
                 VStack(spacing: 20) {
-                    CustomTextField(text: $text, placeholder: Text("Email"), imageName: "envelope")
+                    CustomTextField(text: $email, placeholder: Text("Email"), imageName: "envelope")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .padding(.horizontal, 32)
                         .foregroundColor(.white)
                     
-                    CustomTextField(text: $text, placeholder: Text("Username"), imageName: "person")
+                    CustomTextField(text: $username, placeholder: Text("Username"), imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .padding(.horizontal, 32)
                         .foregroundColor(.white)
                     
-                    CustomTextField(text: $text, placeholder: Text("Full name"), imageName: "person")
+                    CustomTextField(text: $fullname, placeholder: Text("Full name"), imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
@@ -78,7 +79,7 @@ struct RegistrationView: View {
                         .foregroundColor(.white)
                 }
                 
-                Button(action: {}, label: {
+                Button(action: { viewModel.register(withEmail: email, password: password) }, label: {
                     Text("Sign in")
                         .font(.headline)
                         .foregroundColor(.white)
