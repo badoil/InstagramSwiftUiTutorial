@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-struct ImageUpleader {
+struct ImageUploader {
     static func uploadImage(image: UIImage, completion: @escaping(String) -> Void) {
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
         let filename = NSUUID().uuidString
@@ -18,6 +18,8 @@ struct ImageUpleader {
             if let error = error {
                 print("DEBUG error: \(error.localizedDescription)")
             }
+            
+            print("successfully uploaded image")
             
             ref.downloadURL { url, _ in
                 guard let imageUrl = url?.absoluteString else { return }

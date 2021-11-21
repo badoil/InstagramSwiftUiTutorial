@@ -79,7 +79,7 @@ struct RegistrationView: View {
                         .foregroundColor(.white)
                 }
                 
-                Button(action: { viewModel.register(withEmail: email, password: password) }, label: {
+                Button(action: { viewModel.register(withEmail: email, password: password, image: selectedImage, fullname: fullname, username: username) }, label: {
                     Text("Sign in")
                         .font(.headline)
                         .foregroundColor(.white)

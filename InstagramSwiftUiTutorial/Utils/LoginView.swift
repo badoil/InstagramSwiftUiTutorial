@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     
-    @State private var text = ""
+    @State private var email = ""
     @State private var password = ""
     
     var body: some View {
@@ -27,7 +27,7 @@ struct LoginView: View {
                         .foregroundColor(.white)
                     
                     VStack(spacing: 20) {
-                        CustomTextField(text: $text, placeholder: Text("Email"), imageName: "envelope")
+                        CustomTextField(text: $email, placeholder: Text("Email"), imageName: "envelope")
                             .padding()
                             .background(Color(.init(white: 1, alpha: 0.15)))
                             .cornerRadius(10)
@@ -54,7 +54,7 @@ struct LoginView: View {
                         })
                     }
                     
-                    Button(action: { viewModel.login() }, label: {
+                    Button(action: { viewModel.login(withEmail: email, password: password) }, label: {
                         Text("Sign in")
                             .font(.headline)
                             .foregroundColor(.white)
