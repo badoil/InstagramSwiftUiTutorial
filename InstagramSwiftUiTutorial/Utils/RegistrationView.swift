@@ -80,7 +80,7 @@ struct RegistrationView: View {
                 }
                 
                 Button(action: { viewModel.register(withEmail: email, password: password, image: selectedImage, fullname: fullname, username: username) }, label: {
-                    Text("Sign in")
+                    Text("Sign up")
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(width: 330, height: 50)

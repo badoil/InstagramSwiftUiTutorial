@@ -30,29 +30,51 @@ class AuthViewModel: ObservableObject {
     }
     
     func register (withEmail email: String, password: String, image: UIImage?, fullname: String, username: String) {
+        print("image: \(String(describing: image))")
         
-        guard let image = image else { return }
+//        guard let image = image else { return }
+//
+//        ImageUploader.uploadImage(image: image) { imageUrl in
+//            Auth.auth().createUser(withEmail: email, password: password) { result, error in
+//                print("fullname: \(fullname)")
+//                if let error = error {
+//                    print("\(error.localizedDescription)")
+//                    return
+//                }
+//                guard let user = result?.user else {return}
+//                print("user created successfully")
+//
+//                let data = ["email": email,
+//                            "username": username,
+//                            "fullname": fullname,
+//                            "profileImageUrl": imageUrl,
+//                            "uid": user.uid]
+//
+//                Firestore.firestore().collection("users").document().setData(data) { _ in
+//                    print("successfully uploaded user data")
+//                    self.userSession = user
+//                }
+//            }
+//        }
         
-        ImageUploader.uploadImage(image: image) { imageUrl in
-            Auth.auth().createUser(withEmail: email, password: password) { result, error in
-                if let error = error {
-                    print("\(error.localizedDescription)")
-                    return
-                }
-                guard let user = result?.user else {return}
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            print("fullname: \(fullname)")
+            if let error = error {
+                print("\(error.localizedDescription)")
+                return
+            }
+            guard let user = result?.user else {return}
+            print("user created successfully")
+            
+            let data = ["email": email,
+                        "username": username,
+                        "fullname": fullname,
+//                        "profileImageUrl": imageUrl,
+                        "uid": user.uid]
+            
+            Firestore.firestore().collection("users").document().setData(data) { _ in
+                print("successfully uploaded user data")
                 self.userSession = user
-                print("user created successfully")
-                
-                let data = ["email": email,
-                            "username": username,
-                            "fullname": fullname,
-                            "profileImageUrl": imageUrl,
-                            "uid": user.uid]
-                
-                Firestore.firestore().collection("users").document().setData(data) { _ in
-                    print("successfully uploaded user data")
-                    self.userSession = user
-                }
             }
         }
     }
@@ -67,6 +89,10 @@ class AuthViewModel: ObservableObject {
     }
     
     func fetchUser() {
-        
+        guard let uid = userSession?.uid else { return }
+        COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
+            guard let user = try? snapshot?.data(as: User.self) else { return }
+            print("DEBUG user is \(user)")
+        }
     }
 }
